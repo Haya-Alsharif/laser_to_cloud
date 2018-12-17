@@ -1,0 +1,7 @@
+<launch>
+    <include file="$(find rplidar_ros)/launch/view_rplidar.launch" />
+
+    <node name="laser_to_cloud_node" pkg="laser_to_cloud" type="laser_to_cloud_node" output="screen">
+        <param name="published_pointcloud_topic"        value="laser_to_cloud/points"/>
+    </node>
+</launch>
